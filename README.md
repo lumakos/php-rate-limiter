@@ -13,24 +13,24 @@ curl -H "Accept: text/plain" -H "Content-Type: text/plain" -X GET http://localho
 ```
 
 ### Understand the problem and establish design scope
-Candidate: What kind of rate limiter are we going to design? Is it a client-side rate limiter or server-side API rate limiter?
+Q: What kind of rate limiter are we going to design? Is it a client-side rate limiter or server-side API rate limiter?
 
-Interviewer: Great question. We focus on the server-side API rate limiter.
+A: Great question. We focus on the server-side API rate limiter.
 
-Candidate: Does the rate limiter throttle API requests based on IP, the user ID, or other properties?
+Q: Does the rate limiter throttle API requests based on IP, the user ID, or other properties?
 
-Interviewer: The rate limiter should be flexible enough to support different sets of throttle rules.
+A: The rate limiter should be flexible enough to support different sets of throttle rules.
 
-Candidate: What is the scale of the system? Is it built for a startup or a big company with a large user base?
+Q: What is the scale of the system? Is it built for a startup or a big company with a large user base?
 
-Interviewer: The system must be able to handle a large number of requests.
+A: The system must be able to handle a large number of requests.
 
-Candidate: Will the system work in a distributed environment?
+Q: Will the system work in a distributed environment?
 
-Interviewer: Yes.
+A: Yes.
 
-Candidate: Is the rate limiter a separate service or should it be implemented in application code?Interviewer: It is a design decisio up to you.
+Q: Is the rate limiter a separate service or should it be implemented in application code?Interviewer: It is a design decisio up to you.
 
-Candidate: Do we need to inform users who are throttled?
+Q: Do we need to inform users who are throttled?
 
-Interviewer: Yes.
+A: Yes.
